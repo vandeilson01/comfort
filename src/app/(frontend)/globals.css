@@ -13,6 +13,11 @@
     font-weight: unset;
   }
 
+
+  .nextjs-toast {
+    display: none !important;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -50,8 +55,8 @@
   }
 
   [data-theme='dark'] {
-    --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
+    --background: 100% 100% 100%;
+    /* --foreground: 210 40% 98%;
 
     --card: 0 0% 4%;
     --card-foreground: 210 40% 98%;
@@ -80,7 +85,7 @@
 
     --success: 196 100% 14%;
     --warning: 34 51% 25%;
-    --error: 10 39% 43%;
+    --error: 10 39% 43%; */
   }
 }
 

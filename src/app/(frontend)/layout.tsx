@@ -15,6 +15,7 @@ import { draftMode } from 'next/headers'
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
+import { getDisplayName } from 'next/dist/shared/lib/utils'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
@@ -25,6 +26,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+
+         
       </head>
       <body>
         <Providers>
@@ -38,7 +41,18 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {children}
           <Footer />
         </Providers>
+
+
+         
       </body>
+
+
+       {/* Adicionando estilo para esconder nextjs-portal */}
+       <style>{`
+            nextjs-portal {
+              display: none;
+            }
+          `}</style>
     </html>
   )
 }
