@@ -1,9 +1,11 @@
 import React from 'react';
+import { Logo } from '../Logo/Logo';
 
 const CustomHeader: React.FC = () => {
   return (
     <div style={{ padding: '20px', background: '#f8f9fa', textAlign: 'center', borderBottom: '2px solid #ddd' }}>
-      <img src="/logo.png" alt="Comfort Hotel" style={{ height: '60px' }} />
+      {/* <img src="/logo.png" alt="Comfort Hotel" style={{ height: '60px' }} /> */}
+      <Logo/>
       <h1 style={{ color: '#002f6c', fontSize: '24px', margin: '10px 0' }}>
         Olá, <strong>Seja bem-vindo</strong>
       </h1>
