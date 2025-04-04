@@ -67,7 +67,6 @@ export interface Config {
   };
   blocks: {};
   collections: {
-    home: Home;
     pages: Page;
     posts: Post;
     media: Media;
@@ -84,7 +83,6 @@ export interface Config {
   };
   collectionsJoins: {};
   collectionsSelect: {
-    home: HomeSelect<false> | HomeSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
@@ -142,17 +140,6 @@ export interface UserAuthOperations {
     email: string;
     password: string;
   };
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "home".
- */
-export interface Home {
-  id: number;
-  title: string;
-  description?: string | null;
-  updatedAt: string;
-  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -913,10 +900,6 @@ export interface PayloadLockedDocument {
   id: number;
   document?:
     | ({
-        relationTo: 'home';
-        value: number | Home;
-      } | null)
-    | ({
         relationTo: 'pages';
         value: number | Page;
       } | null)
@@ -997,16 +980,6 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "home_select".
- */
-export interface HomeSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  updatedAt?: T;
-  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
