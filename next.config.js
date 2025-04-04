@@ -22,6 +22,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
+  env: {
+    PAYLOAD_SECRET: process.env.PAYLOAD_SECRET, // 🔹 Garante que a variável seja carregada
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
