@@ -11,11 +11,11 @@ export default function VideoInactivity() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        'http://localhost:3000/api/media?limit=1&sort=-createdAt&where[mimeType][contains]=video'
+        'http://154.53.56.159:3000/api/media?limit=1&sort=-createdAt&where[mimeType][contains]=video'
       );
       const data = await response.json();
       if (data.docs && data.docs.length > 0) {
-        const url = `http://localhost:3000${data.docs[0].url}`;
+        const url = `http://154.53.56.159:3000${data.docs[0].url}`;
         console.log('URL do vídeo:', url);
         setVideoUrl(url);
       } else {
