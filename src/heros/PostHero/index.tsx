@@ -60,7 +60,7 @@ export const PostHero: React.FC<{
           </div>
         </div>
       </div>
-      <div className="w-[80%] mx-auto"> {/* Added wrapper to reduce width */}
+      <div className="w-[80%] max-h-[300px] mx-auto"> {/* Added wrapper to reduce width */}
         <div className="min-h-[50vh] select-none rounded-2xl overflow-hidden">
           {heroImage && typeof heroImage !== 'string' && (
             <Media fill priority imgClassName="-z-10 object-cover rounded-2xl" resource={heroImage} />
